@@ -95,7 +95,7 @@ const Cart = ({ state, dispatch }) => {
         <hr />
         <div className="cart-total">
           <h4>
-            total <span>Rs {total}</span>
+            total <span>$ {total}</span>
           </h4>
         </div>
         <button

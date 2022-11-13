@@ -44,15 +44,20 @@ const App = () => {
     amount: 0,
   };
   const [state, dispatch] = useReducer(reducer, initialState);
-
+// const [lim, setLim] = useState(25);
+// const handleLimit = () =>{
+// setLim(lim + 25)
+// alert("hy")
+// }
   const url =
-    "https://dummyjson.com/products?limit=12&select=title,price,thumbnail";
+    `https://dummyjson.com/products?limit=300&select=title,price,thumbnail`;
   const getData = async () => {
     dispatch({ type: "LOADING" });
     const resp = await fetch(url);
     const data = await resp.json();
     dispatch({ type: "DISPLAY_PRODUCTS", payload: data.products });
   };
+  
 
   useEffect(() => {
     getData();
