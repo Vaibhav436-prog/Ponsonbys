@@ -21,7 +21,7 @@ const App = () => {
       setProductStyle({
         color: "white",
         backgroundColor: "#141d26",
-        boxShadow: "0px 0px 15px white",
+        boxShadow: "blue",
       });
       setNavDark("navbar navbar-expand-lg bg-dark navbar-dark");
     } else {
@@ -105,7 +105,7 @@ const App = () => {
             theme={theme}
             productStyle={productStyle}
           />
-          <Cart state={state} dispatch={dispatch} />
+         <Cart state={state} dispatch={dispatch} />
         </main>
       </div>
     </React.Fragment>
