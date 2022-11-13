@@ -50,7 +50,7 @@ const App = () => {
 // alert("hy")
 // }
   const url =
-    `https://dummyjson.com/products?limit=300&select=title,price,thumbnail`;
+    `https://dummyjson.com/products/category/womens-jewellery`;
   const getData = async () => {
     dispatch({ type: "LOADING" });
     const resp = await fetch(url);
@@ -102,7 +102,7 @@ const App = () => {
     <React.Fragment>
       <div className={theme}>
         <Navbar state={state} mode={handleMode} text={text} />
-        {/* <Nav navDark={navDark}/> */}
+        <Nav navDark={navDark}/>
         <main>
           <Product
             state={state}

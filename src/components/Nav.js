@@ -4,7 +4,7 @@ export default function Nav({navDark}) {
   return (
    <>
    <nav className= {navDark}>
-  <div class="container-fluid">
+  <div class="container-fluid container">
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -14,7 +14,7 @@ export default function Nav({navDark}) {
           <a class="nav-link" aria-current="page" href="#">Grocery</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="#">Mobiles</a>
+          <a class="nav-link" aria-current="page" href="https://dummyjson.com/products/category/smartphones">Mobiles</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" aria-current="page" href="#">Fashion</a>
