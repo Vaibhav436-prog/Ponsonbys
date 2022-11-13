@@ -2,6 +2,9 @@ import React from "react";
 
 const Cart = ({ state, dispatch }) => {
   const { cart, total } = state;
+  if (state.productLoading) {
+    return;
+  }
   if (cart.length === 0) {
     return (
       <section className="cart">

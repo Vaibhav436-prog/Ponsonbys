@@ -1,18 +1,47 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 
 const Product = ({ state, dispatch, productStyle }) => {
   const { product, cart } = state;
   const myStyle = {
-    color: 'white',
-    backgroundColor: 'grey',
-    boxShadow: '0px 0px 3px red'
-  }
+    color: "white",
+    backgroundColor: "grey",
+    boxShadow: "0px 0px 3px red",
+  };
   // const [mystyle, setMystyle] = useState({
   //   color: 'black',
   //   backgroundColor: 'white',
   //   boxShadow: '0px 0px 15px black'
   // })
-
+  if (state.productLoading) {
+    return (
+      <div className="loading">
+        <div class="spinner-grow text-primary" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+        <div class="spinner-grow text-secondary" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+        <div class="spinner-grow text-success" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+        <div class="spinner-grow text-danger" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+        <div class="spinner-grow text-warning" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+        <div class="spinner-grow text-info" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+        <div class="spinner-grow text-light" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+        <div class="spinner-grow text-dark" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+      </div>
+    );
+  }
   return (
     <section className="product-section">
       <div className="product-title">

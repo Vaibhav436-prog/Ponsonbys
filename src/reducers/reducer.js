@@ -2,8 +2,16 @@ const reducer = (state, action) => {
   if (action.type === "LOADING") {
     return { ...state, loading: true };
   }
+  if (action.type === "PRODUCT_LOADING") {
+    return { ...state, productLoading: true };
+  }
   if (action.type === "DISPLAY_PRODUCTS") {
-    return { ...state, product: action.payload, loading: false };
+    return {
+      ...state,
+      product: action.payload,
+      loading: false,
+      productLoading: false,
+    };
   }
   if (action.type === "ADD_TO_CART") {
     return {

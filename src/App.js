@@ -38,26 +38,25 @@ const App = () => {
 
   const initialState = {
     loading: false,
+    productLoading: false,
     product: [],
     cart: [],
     total: 0,
     amount: 0,
   };
   const [state, dispatch] = useReducer(reducer, initialState);
-// const [lim, setLim] = useState(25);
-// const handleLimit = () =>{
-// setLim(lim + 25)
-// alert("hy")
-// }
-  const url =
-    `https://dummyjson.com/products/category/womens-jewellery`;
+  // const [lim, setLim] = useState(25);
+  // const handleLimit = () =>{
+  // setLim(lim + 25)
+  // alert("hy")
+  // }
+  const url = `https://dummyjson.com/products/?limit=12`;
   const getData = async () => {
     dispatch({ type: "LOADING" });
     const resp = await fetch(url);
     const data = await resp.json();
     dispatch({ type: "DISPLAY_PRODUCTS", payload: data.products });
   };
-  
 
   useEffect(() => {
     getData();
@@ -102,7 +101,7 @@ const App = () => {
     <React.Fragment>
       <div className={theme}>
         <Navbar state={state} mode={handleMode} text={text} />
-        <Nav navDark={navDark}/>
+        <Nav navDark={navDark} dispatch={dispatch} />
         <main>
           <Product
             state={state}
@@ -110,7 +109,7 @@ const App = () => {
             theme={theme}
             productStyle={productStyle}
           />
-         <Cart state={state} dispatch={dispatch} />
+          <Cart state={state} dispatch={dispatch} />
         </main>
       </div>
     </React.Fragment>
