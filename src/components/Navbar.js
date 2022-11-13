@@ -19,10 +19,10 @@ const Navbar = ({ state, mode, text }) => {
             </div>
           </div>
           {/* <button className="btn" >{text}</button> */}
-          <div class="form-check form-switch">
+          {/* <div class="form-check form-switch">
   <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" onClick={mode}/>
   <label class="form-check-label" for="flexSwitchCheckDefault">{text}</label>
-</div>
+</div> */}
 
         </div>
 

@@ -1,10 +1,10 @@
 import React from "react";
 
-export default function Nav({ navDark, dispatch }) {
+export default function Nav({ navDark, dispatch, mode, text }) {
   const getData = async (category) => {
     dispatch({ type: "PRODUCT_LOADING" });
     if (category === "All") {
-      const resp = await fetch(`https://dummyjson.com/products/?limit=21`);
+      const resp = await fetch(`https://dummyjson.com/products/?limit=40000000`);
       const data = await resp.json();
       dispatch({ type: "DISPLAY_PRODUCTS", payload: data.products });
       return;
@@ -38,7 +38,7 @@ export default function Nav({ navDark, dispatch }) {
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
                 <a
-                  class="nav-link"
+                  class="nav-link mx-2"
                   aria-current="page"
                   href="#"
                   onClick={() => {
@@ -50,7 +50,7 @@ export default function Nav({ navDark, dispatch }) {
               </li>
               <li class="nav-item">
                 <a
-                  class="nav-link"
+                  class="nav-link mx-2"
                   aria-current="page"
                   href="#"
                   onClick={() => {
@@ -62,7 +62,7 @@ export default function Nav({ navDark, dispatch }) {
               </li>
               <li class="nav-item">
                 <a
-                  class="nav-link"
+                  class="nav-link mx-2"
                   aria-current="page"
                   href="#"
                   onClick={() => {
@@ -74,7 +74,7 @@ export default function Nav({ navDark, dispatch }) {
               </li>
               <li class="nav-item">
                 <a
-                  class="nav-link"
+                  class="nav-link mx-2"
                   aria-current="page"
                   href="#"
                   onClick={() => {
@@ -86,7 +86,7 @@ export default function Nav({ navDark, dispatch }) {
               </li>
               <li class="nav-item">
                 <a
-                  class="nav-link"
+                  class="nav-link mx-2"
                   aria-current="page"
                   href="#"
                   onClick={() => {
@@ -98,7 +98,7 @@ export default function Nav({ navDark, dispatch }) {
               </li>
               <li class="nav-item">
                 <a
-                  class="nav-link"
+                  class="nav-link mx-2"
                   aria-current="page"
                   href="#"
                   onClick={() => {
@@ -108,11 +108,47 @@ export default function Nav({ navDark, dispatch }) {
                   Furniture
                 </a>
               </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link mx-2"
+                  aria-current="page"
+                  href="#"
+                  onClick={() => {
+                    handleClick("mens-watches");
+                  }}
+                >
+                  Watches
+                </a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link mx-2"
+                  aria-current="page"
+                  href="#"
+                  onClick={() => {
+                    handleClick("motorcycle");
+                  }}
+                >
+                  Motorcycle
+                </a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link mx-2"
+                  aria-current="page"
+                  href="#"
+                  onClick={() => {
+                    handleClick("sunglasses");
+                  }}
+                >
+                  Sunglasses
+                </a>
+              </li>
             </ul>
-            {/* <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form> */}
+            <div class="form-check form-switch">
+  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" onClick={mode}/>
+  <label class="form-check-label" for="flexSwitchCheckDefault">{text}</label>
+</div>
           </div>
         </div>
       </nav>

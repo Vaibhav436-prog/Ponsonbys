@@ -145,7 +145,7 @@ Navbar
 }
 
 .navbar {
-  background-color: #dcdce0;
+  background-color: #6e6e75;
   padding: 1.25rem 2rem;
 }
 
@@ -159,7 +159,7 @@ Navbar
 }
 
 .navbar .logo h2 {
-  color: black;
+  color: white;
 }
 
 .right {
@@ -440,4 +440,9 @@ hr {
     margin-right: -18px;
     padding-left: 2em;
   }
+}
+.form-check-label svg{
+width: 35px;
+height: 19px;
+color: #ffc01f;
 }
