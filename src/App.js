@@ -105,7 +105,6 @@ const App = () => {
             theme={theme}
             productStyle={productStyle}
           />
-          <h1>papa papa hote h</h1>
           <Cart state={state} dispatch={dispatch} />
         </main>
       </div>
