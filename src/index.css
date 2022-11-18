@@ -407,10 +407,13 @@ hr {
 .dark-mode{
   color: white;
   background-color: #141d26;
+  transition: all 0.4s linear;
 }
 .light-mode{
   color: black;
   background-color: white;
+  transition: all 0.4s linear;
+
 }
 .form-check-label{
   color: black;

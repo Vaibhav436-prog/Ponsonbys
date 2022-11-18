@@ -29,7 +29,7 @@ const Cart = ({ state, dispatch }) => {
             clear cart
           </button>
         </div>
-        <marquee direction="left" width="100%" className="my-2">
+        <marquee direction="left" width="100%" className="my-4">
 <strong>&copy; Ponsonbys</strong> is one of the leading brand and parent organization of&nbsp;
 <strong>Weazel news</strong>. 
 </marquee>
