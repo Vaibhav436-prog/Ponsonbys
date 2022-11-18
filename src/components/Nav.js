@@ -21,7 +21,7 @@ export default function Nav({ navDark, dispatch, mode, text }) {
 
   return (
     <>
-      <nav className={navDark}>
+      <div><nav className={navDark}>
         <div class="container-fluid container">
           <button
             class="navbar-toggler"
@@ -151,7 +151,7 @@ export default function Nav({ navDark, dispatch, mode, text }) {
 </div>
           </div>
         </div>
-      </nav>
+      </nav></div>
     </>
   );
 }

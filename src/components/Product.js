@@ -50,6 +50,10 @@ const Product = ({ state, dispatch, productStyle }) => {
       <div className="products-center">
         {product.map((item) => {
           const { id, thumbnail, title, price } = item;
+          // const [mytitle, setMytitle] = useState(title)
+          // if(title.length < 17){
+          //   setMytitle()
+          // }
           return (
             <div className="product" key={id} style={productStyle}>
               <div className="img">
@@ -57,7 +61,7 @@ const Product = ({ state, dispatch, productStyle }) => {
               </div>
               <div className="product-footer">
                 <div className="product-footer-details">
-                  <span>{title}</span>
+                  <span>{title.length < 17? title:title.slice(0, 16)+'...'}</span>
                   <b>$ {price}</b>
                 </div>
                 {cart.some((item) => item.id === id) ? (

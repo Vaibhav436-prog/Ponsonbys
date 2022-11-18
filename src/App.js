@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import Cart from "./components/Cart";
 import reducer from "./reducers/reducer";
 import Nav from "./components/Nav";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 const App = () => {
   const [navDark, setNavDark] = useState("navbar navbar-expand-lg bg-light");
