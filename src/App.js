@@ -132,9 +132,10 @@ const App = () => {
     <React.Fragment>
       <div className={theme}>
         <Navbar state={state} mode={handleMode} text={text} handleCart={handleCart}/>
-        <Nav navDark={navDark} dispatch={dispatch} mode={handleMode} text={text}/>
         <main>
-         <div className="productAddress" style={vProduct}> <Product
+
+        <div className="productAddress" style={vProduct}> <Nav navDark={navDark} dispatch={dispatch} mode={handleMode} text={text}/>
+          <Product
             state={state}
             dispatch={dispatch}
             theme={theme}
