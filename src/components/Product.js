@@ -61,7 +61,7 @@ const Product = ({ state, dispatch, productStyle }) => {
               </div>
               <div className="product-footer">
                 <div className="product-footer-details">
-                  <span>{title.length < 17? title:title.slice(0, 16)+'...'}</span>
+                  <h6>{title.length < 17? title:title.slice(0, 16)+'...'}<span class="tooltiptext">{title}</span></h6>
                   <b>$ {price}</b>
                 </div>
                 {cart.some((item) => item.id === id) ? (

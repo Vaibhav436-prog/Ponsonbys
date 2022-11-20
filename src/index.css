@@ -462,3 +462,15 @@ marquee{
 .micky{
 cursor: pointer;
 }
+.product-footer-details span{
+  visibility: hidden;
+  font-weight: 600;
+  position: absolute;
+  background-color: #9d6e6e;
+  color: #eed3d3;
+  border-radius: 15px;
+  padding: 4px;
+}
+.product-footer-details:hover .tooltiptext{
+visibility: visible;
+}
