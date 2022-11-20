@@ -468,9 +468,19 @@ cursor: pointer;
   position: absolute;
   background-color: #9d6e6e;
   color: #eed3d3;
-  border-radius: 15px;
-  padding: 4px;
+  border-radius: 0px 27px;
+  padding: 7px;
+}
+@keyframes example {
+  0%   {background-color: #9d6e6e; color:  #eed3d3;}
+  25%  {background-color: rgb(160, 134, 197); color: #040455;}
+  50%  {background-color:rgb(255, 89, 197); color: #16162e;}
+  75%  {background-color:rgb(151, 237, 171); color: #6e6e75;}
+  100% {background-color:rgb(74, 27, 27); color: #f1f5f8;}
 }
 .product-footer-details:hover .tooltiptext{
 visibility: visible;
+animation-name: example;
+animation-duration: 4s;
+animation-iteration-count: infinite;
 }
