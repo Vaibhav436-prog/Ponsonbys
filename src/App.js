@@ -44,6 +44,33 @@ const App = () => {
     }
   };
 
+  //cart work is here--
+
+  const [vProduct, setVProduct] = useState({
+    display: 'block'
+  })
+  const [cartStyle, setCartStyle] = useState({
+    display: 'none',
+  })
+  const handleCart = () =>{
+  if(vProduct.display === 'block'){
+    setCartStyle({
+      display: 'block'
+    })
+    setVProduct({
+      display: 'none'
+    })
+  }
+  else{
+    setCartStyle({
+      display: 'none'
+    })
+    setVProduct({
+      display: 'block'
+    })
+  }
+}
+ 
   const initialState = {
     loading: false,
     productLoading: false,
@@ -104,16 +131,21 @@ const App = () => {
   return (
     <React.Fragment>
       <div className={theme}>
-        <Navbar state={state} mode={handleMode} text={text} />
+        <Navbar state={state} mode={handleMode} text={text} handleCart={handleCart}/>
         <Nav navDark={navDark} dispatch={dispatch} mode={handleMode} text={text}/>
         <main>
-          <Product
+         <div className="productAddress" style={vProduct}> <Product
             state={state}
             dispatch={dispatch}
             theme={theme}
             productStyle={productStyle}
-          />
-          <Cart state={state} dispatch={dispatch} />
+          /></div>
+<div className="cartAddress" style={cartStyle}>
+  <Cart state={state} dispatch={dispatch} />
+</div>
+<marquee direction="left" width="100%" className="my-4">
+      <strong>&copy; Ponsonbys</strong> 2022. All Rights Reserved.
+</marquee>
         </main>
       </div>
     </React.Fragment>

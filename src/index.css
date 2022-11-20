@@ -407,12 +407,12 @@ hr {
 .dark-mode{
   color: white;
   background-color: #141d26;
-  transition: all 0.4s linear;
+  transition: all 0.3s linear;
 }
 .light-mode{
   color: black;
   background-color: white;
-  transition: all 0.4s linear;
+  transition: all 0.3s linear;
 
 }
 .form-check-label{
@@ -458,4 +458,7 @@ marquee{
   border: 3px solid #ab9393;
   border-radius: 23px;
   /* box-shadow: 0px 0px 23px red; */
+}
+.micky{
+cursor: pointer;
 }
